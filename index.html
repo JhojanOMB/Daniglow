@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <!-- 1. Metadatos y Rendimiento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- 2. SEO Principal -->
+  <title>Daniglow | Maquillaje Profesional y Estética</title>
+  <meta name="description" content="Daniglow ofrece servicios profesionales de maquillaje social, novias, editorial y cursos de automaquillaje. ¡Resalta tu belleza y luce radiante hoy!" />
+  <meta name="keywords" content="maquillaje profesional, maquillaje de novias, maquillaje social, cursos de automaquillaje, belleza, cosmética" />
+  <meta name="theme-color" content="#36000d" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Daniglow | Maquillaje Profesional" />
+  <meta property="og:description" content="Servicios profesionales de maquillaje para eventos, novias y talleres de automaquillaje." />
+  <meta property="og:image" content="https://jhojanomb.github.io/Daniglow/img/Daniglow.png" />
+
+  <!-- Preconnect & Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="./img/Isologo.webp" type="image/webp" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png" />
+
+  <!-- Frameworks y Librerías Estilos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            display: ['Onest', 'sans-serif'],
+          },
+          colors: {
+            neumo: { light: '#e8e2e2', ink: '#2b181d', paper: '#f4efef' },
+            vinotinto: {
+              900: '#36000d',
+              800: '#4a0012',
+              700: '#800020',
+              600: '#a31d45',
+              300: '#c08497',
+              100: '#ebdce0'
+            }
+          },
+          boxShadow: {
+            neumo: '6px 6px 12px #c5bebe, -6px -6px 12px #ffffff',
+            'neumo-inset': 'inset 4px 4px 8px #c5bebe, inset -4px -4px 8px #ffffff'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- CSS local consolidado -->
+  <link rel="stylesheet" href="./css/estilo.css" />
+
+  <!-- Model Viewer 3D -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <!-- Scripts locales defer -->
+  <script src="./js/dom.js" defer></script>
+  <script src="./js/carga.js" defer></script>
+
+  <!-- JSON-LD Datos Estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Daniglow - Maquillaje Profesional",
+    "url": "https://jhojanomb.github.io/Daniglow/",
+    "image": "https://jhojanomb.github.io/Daniglow/img/Daniglow.png",
+    "description": "Estudio y servicios de maquillaje profesional para eventos, novias y talleres de automaquillaje.",
+    "telephone": "+573134722142",
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+
+<body class="bg-neumo-light text-neumo-ink font-sans antialiased selection:bg-vinotinto-700 selection:text-white flex flex-col min-h-screen">
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 text-white transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" onclick="cargarContenido('paginas/inicio.html')" class="flex items-center space-x-3 group focus:outline-none">
+        <img src="./img/Isologo.ico" alt="Daniglow Logo" class="w-9 h-9 transition-transform duration-300 group-hover:scale-110" />
+        <span class="text-2xl font-bold tracking-wider font-display bg-gradient-to-r from-white via-vinotinto-100 to-vinotinto-300 bg-clip-text text-transparent">
+          Daniglow
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wide">
+        <a href="#" onclick="cargarContenido('paginas/inicio.html')" class="hover:text-vinotinto-300 transition-colors py-1 relative group">
+          Inicio
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-vinotinto-300 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" onclick="cargarContenido('paginas/sobre_nosotros.html')" class="hover:text-vinotinto-300 transition-colors py-1 relative group">
+          Sobre Mí
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-vinotinto-300 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" onclick="cargarContenido('paginas/servicios.html')" class="hover:text-vinotinto-300 transition-colors py-1 relative group">
+          Servicios
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-vinotinto-300 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" onclick="cargarContenido('paginas/portafolio.html')" class="hover:text-vinotinto-300 transition-colors py-1 relative group">
+          Portafolio
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-vinotinto-300 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#" onclick="cargarContenido('paginas/contacto.html')" class="hover:text-vinotinto-300 transition-colors py-1 relative group">
+          Contacto
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-vinotinto-300 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" aria-label="Abrir menú" class="lg:hidden p-2 rounded-lg text-white hover:text-vinotinto-300 hover:bg-white/5 transition focus:outline-none">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden z-50">
+      <div id="drawer-content" class="absolute top-0 left-0 w-80 max-w-[85vw] h-full bg-vinotinto-900 border-r border-white/10 shadow-2xl flex flex-col -translate-x-full transition-transform duration-300 ease-out">
+        
+        <!-- Drawer Header -->
+        <div class="flex items-center justify-between px-6 py-5 border-b border-white/10 bg-black/20">
+          <div class="flex items-center space-x-3">
+            <img src="./img/Isologo.ico" alt="Daniglow Logo" class="w-8 h-8" />
+            <span class="text-xl font-bold font-display text-white">Menú</span>
+          </div>
+          <button id="menu-close" aria-label="Cerrar menú" class="p-2 text-white/70 hover:text-white rounded-lg hover:bg-white/10 transition">
+            <i class="fas fa-xmark text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Drawer Links -->
+        <nav class="flex-1 overflow-y-auto px-4 py-6 space-y-2">
+          <a href="#" onclick="cargarContenido('paginas/inicio.html'); toggleDrawer()" class="flex items-center space-x-4 px-4 py-3 rounded-xl text-white/90 hover:text-white hover:bg-vinotinto-800 transition group">
+            <i class="fas fa-home text-vinotinto-300 w-6 text-center text-lg"></i>
+            <span class="font-medium">Inicio</span>
+          </a>
+          <a href="#" onclick="cargarContenido('paginas/sobre_nosotros.html'); toggleDrawer()" class="flex items-center space-x-4 px-4 py-3 rounded-xl text-white/90 hover:text-white hover:bg-vinotinto-800 transition group">
+            <i class="fas fa-user text-vinotinto-300 w-6 text-center text-lg"></i>
+            <span class="font-medium">Sobre Mí</span>
+          </a>
+          <a href="#" onclick="cargarContenido('paginas/servicios.html'); toggleDrawer()" class="flex items-center space-x-4 px-4 py-3 rounded-xl text-white/90 hover:text-white hover:bg-vinotinto-800 transition group">
+            <i class="fas fa-wand-magic-sparkles text-vinotinto-300 w-6 text-center text-lg"></i>
+            <span class="font-medium">Servicios</span>
+          </a>
+          <a href="#" onclick="cargarContenido('paginas/portafolio.html'); toggleDrawer()" class="flex items-center space-x-4 px-4 py-3 rounded-xl text-white/90 hover:text-white hover:bg-vinotinto-800 transition group">
+            <i class="fas fa-images text-vinotinto-300 w-6 text-center text-lg"></i>
+            <span class="font-medium">Portafolio</span>
+          </a>
+          <a href="#" onclick="cargarContenido('paginas/contacto.html'); toggleDrawer()" class="flex items-center space-x-4 px-4 py-3 rounded-xl text-white/90 hover:text-white hover:bg-vinotinto-800 transition group">
+            <i class="fas fa-envelope text-vinotinto-300 w-6 text-center text-lg"></i>
+            <span class="font-medium">Contacto</span>
+          </a>
+        </nav>
+
+        <!-- Drawer Footer -->
+        <div class="p-6 border-t border-white/10 bg-black/30 text-center">
+          <p class="text-xs text-vinotinto-300/80">© 2026 Daniglow. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Dinámico Principal -->
+  <main id="content" class="flex-grow"></main>
+
+  <!-- Botones Acciones Flotantes -->
+  <aside class="fixed bottom-6 right-6 z-40 flex flex-col items-center space-y-3">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/573134722142" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp"
+       class="w-12 h-12 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-lg hover:bg-emerald-500 hover:scale-110 active:scale-95 transition-all">
+      <i class="bi bi-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Scroll Back To Top -->
+    <button id="back-to-top" aria-label="Volver arriba"
+            class="w-12 h-12 rounded-full bg-vinotinto-700 text-white flex items-center justify-center shadow-lg hover:bg-vinotinto-600 hover:scale-110 active:scale-95 transition-all opacity-0 pointer-events-none">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </aside>
+
+  <!-- Scripts Smooth Scroll & Drawer Control -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script>
+    // Smooth Scroll Setup
+    const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Mobile Drawer Logic
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const drawerContent = document.getElementById('drawer-content');
+
+    function toggleDrawer() {
+      const isOpen = !mobileMenu.classList.contains('opacity-0');
+      if (isOpen) {
+        drawerContent.classList.add('-translate-x-full');
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+      } else {
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        drawerContent.classList.remove('-translate-x-full');
+      }
+    }
+
+    menuBtn.addEventListener('click', toggleDrawer);
+    closeBtn.addEventListener('click', toggleDrawer);
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) toggleDrawer();
+    });
+
+    // Control del botón Back To Top según scroll
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+      } else {
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      lenis.scrollTo(0);
+    });
+  </script>
+</body>
+
+</html>

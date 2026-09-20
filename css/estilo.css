@@ -1,0 +1,305 @@
+/* Variables - Tema Único Claro (Belleza & Neumorfismo Cálido) */
+:root {
+  --neumo-pg: #e8e2e2;
+  --neumo-bg: #e8e2e2;
+  --neumo-light: #ffffff;
+  --neumo-dark: #c5bebe;
+  
+  /* Paleta Vinotinto & Rosé Gold */
+  --primary: #800020;               /* Vinotinto principal */
+  --primary-dark-morado: #4a0012;   /* Vinotinto Profundo */
+  --primary-morado: #800020;        /* Vinotinto Borgoña */
+  --primary-light-morado: #c08497;  /* Rosé Soft / Acento suave */
+  
+  --greyLight-1: #e8e2e2;
+  --greyLight-2: #cfc7c7;
+  --white: #ffffff;
+  --text: #2b181d;                  /* Texto oscuro cálido */
+  --bg-body: #e8e2e2;
+  --bg-secondary: #f4efef;
+
+  /* Contenedores generales */
+  --offset: 6px;
+  --blur: 12px;
+
+  /* Botones */
+  --btn-offset: 8px;
+  --btn-blur: 12px;
+}
+
+/* Aplicar cambios en el body */
+body {
+  background-color: var(--bg-body) !important;
+  color: var(--text) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+/* Contraste de texto para módulos */
+#content #servicios .text-gray-900,
+#content #servicios .text-gray-800,
+#content #servicios .text-gray-700,
+#content #servicios .text-gray-600,
+#content #portafolio .text-gray-900,
+#content #portafolio .text-gray-800,
+#content #portafolio .text-gray-700,
+#content #portafolio .text-gray-600,
+#content #contacto .text-gray-900,
+#content #contacto .text-gray-800,
+#content #contacto .text-gray-700,
+#content #contacto .text-gray-600,
+#content #faq .text-gray-900,
+#content #faq .text-gray-800,
+#content #faq .text-gray-700,
+#content #faq .text-gray-600,
+#content #sobre-nosotros-body .text-gray-600,
+#content #mision-vision-body .text-gray-600,
+#content #metas .text-gray-600,
+#content #valores .text-gray-600 {
+  color: #2b181d !important;
+}
+
+/* Iconos de las secciones en Vinotinto */
+#content #servicios i,
+#content #portafolio i,
+#content #contacto i,
+#content #faq i,
+#content #sobre-nosotros-body i,
+#content #mision-vision-body i,
+#content #metas i,
+#content #valores i {
+  color: #800020;
+}
+
+/* Iconos sobre botones conservan contraste blanco */
+#content #portafolio a.bg-purple-800 i,
+#content #portafolio a.bg-purple-700 i,
+#content #servicios a.bg-purple-800 i,
+#content #servicios a.bg-purple-700 i {
+  color: #ffffff !important;
+}
+
+#content i {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Neumorphic containers */
+.neumorph {
+  background: var(--neumo-bg) !important;
+  box-shadow:
+    var(--offset) var(--offset) var(--blur) var(--neumo-dark),
+    calc(-1 * var(--offset)) calc(-1 * var(--offset)) var(--blur) var(--neumo-light) !important;
+  transition: box-shadow 0.2s;
+  border-radius: 1.5rem;
+}
+
+.neumorph:active {
+  box-shadow:
+    inset var(--offset) var(--offset) var(--blur) var(--neumo-dark),
+    inset calc(-1 * var(--offset)) calc(-1 * var(--offset)) var(--blur) var(--neumo-light);
+}
+
+/* Neumorphic inset (campos, tarjetas hundidas) */
+.neumorph-inset {
+  background: var(--neumo-bg) !important;
+  border-radius: 1rem;
+  box-shadow:
+    inset var(--offset) var(--offset) var(--blur) var(--neumo-dark),
+    inset calc(-1 * var(--offset)) calc(-1 * var(--offset)) var(--blur) var(--neumo-light) !important;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Focus con resplandor vinotinto */
+.neumorph-inset:focus {
+  box-shadow:
+    inset calc(var(--offset) / 2) calc(var(--offset) / 2) calc(var(--blur) / 1.6) var(--neumo-dark),
+    inset calc(-1 * var(--offset) / 2) calc(-1 * var(--offset) / 2) calc(var(--blur) / 1.6) var(--neumo-light),
+    0 0 0 2px rgba(128, 0, 32, 0.3);
+}
+
+.neumorph-bg {
+  background: var(--neumo-bg);
+  border-radius: 1.5rem;
+  box-shadow:
+    var(--offset) var(--offset) var(--blur) var(--neumo-dark),
+    calc(-1 * var(--offset)) calc(-1 * var(--offset)) var(--blur) var(--neumo-light);
+  transition: box-shadow .18s ease, transform .12s ease;
+}
+
+.neumorph-bg:active {
+  box-shadow:
+    inset calc(var(--offset) / 2) calc(var(--offset) / 2) calc(var(--blur) / 1.6) var(--neumo-dark),
+    inset calc(-1 * var(--offset) / 2) calc(-1 * var(--offset) / 2) calc(var(--blur) / 1.6) var(--neumo-light);
+  transform: translateY(1px);
+}
+
+/* Botones neumórficos en Vinotinto */
+.btn-neumorph-morado {
+  background: linear-gradient(135deg, var(--primary-morado), var(--primary-light-morado));
+  color: #ffffff;
+  box-shadow:
+    5px 5px 14px rgba(0,0,0,0.18),
+    -5px -5px 14px rgba(255,255,255,0.25);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn-neumorph-morado:hover {
+  background: linear-gradient(135deg, var(--primary-dark-morado), var(--primary-morado));
+  transform: translateY(-1px);
+  box-shadow:
+    6px 6px 16px rgba(0,0,0,0.24),
+    -6px -6px 16px rgba(255,255,255,0.3);
+}
+
+.btn-neumorph-morado:active {
+  box-shadow:
+    inset 4px 4px 12px rgba(0,0,0,0.3),
+    inset -4px -4px 12px rgba(255,255,255,0.15);
+  transform: translateY(1px);
+}
+
+/* Botones generales */
+.btn-neumorph {
+  background: var(--neumo-bg);
+  border-radius: 9999px;
+  color: var(--text);
+  box-shadow:
+    var(--btn-offset) var(--btn-offset) var(--btn-blur) rgba(0,0,0,0.08),
+    calc(-1 * var(--btn-offset)) calc(-1 * var(--btn-offset)) var(--btn-blur) var(--neumo-light);
+  transition: box-shadow .18s ease, transform .12s ease;
+}
+
+.btn-neumorph:hover {
+  box-shadow:
+    4px 4px 8px -2px rgba(0, 0, 0, 0.15),
+    -3px -3px 8px -1px var(--neumo-light) !important;
+}
+
+.btn-neumorph:active {
+  box-shadow:
+    inset 4px 4px 10px rgba(0,0,0,0.12),
+    inset -4px -4px 10px var(--neumo-light) !important; 
+  transform: translateY(1px);
+}
+
+/* Tarjetas orgánicas */
+.tarjeta-semiredonda {
+  width: 30rem;
+  height: 15rem;
+  background-color: transparent;
+  box-shadow: inset 10px 10px 10px 10px rgba(0, 0, 0, 0.05),
+    10px 10px 20px rgba(128, 0, 32, 0.15),
+    inset -10px -10px 10px 10px rgba(255, 255, 255, 0.9);
+  border-radius: 51% 49% 62% 38% / 25% 57% 43% 75%;
+  position: relative;
+  padding: 4rem 4rem 12rem 6rem;
+}
+
+/* Campo de búsqueda */
+.search-neumorph {
+  background: var(--neumo-bg);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1.25rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow:
+    var(--offset) var(--offset) var(--blur) var(--neumo-dark),
+    calc(-1 * var(--offset)) calc(-1 * var(--offset)) var(--blur) var(--neumo-light);
+  transition: box-shadow 0.2s, background 0.2s;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.search-neumorph:focus {
+  outline: none;
+  box-shadow:
+    inset var(--offset) var(--offset) var(--blur) var(--neumo-dark),
+    inset calc(-1 * var(--offset)) calc(-1 * var(--offset)) var(--blur) var(--neumo-light);
+}
+
+/* Botón flotante Volver Arriba */
+#back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  z-index: 9999;
+  border-radius: 9999px;
+  background: #800020;
+  color: #ffffff;
+  box-shadow:
+    4px 4px 10px rgba(0,0,0,0.25),
+    -4px -4px 10px rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Validaciones de formulario */
+input.error, textarea.error {
+  border: 2px solid #e11d48;
+}
+
+input.success, textarea.success {
+  border: 2px solid #10b981;
+}
+
+.error-message {
+  color: #e11d48;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  min-height: 1rem;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9f8a90;
+  pointer-events: none;
+  width: 20px;
+  text-align: center;
+}
+
+/* Visor 3D */
+.model-wrap {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  perspective: 1400px;
+  will-change: transform;
+}
+
+.model-viewer-3d {
+  width: 100%;
+  height: 420px;
+  max-height: 60vh;
+  min-height: 320px;
+  transform-style: preserve-3d;
+  user-select: none;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .model-viewer-3d { height: 320px; }
+  .model-wrap { max-width: 95%; }
+}

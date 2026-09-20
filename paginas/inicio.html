@@ -1,0 +1,439 @@
+<!-- =========================================================
+     HERO
+========================================================== -->
+<header
+  id="inicio"
+  role="banner"
+  class="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-[#f8f3f4] px-5 py-16 sm:px-8 lg:px-16 lg:py-20"
+>
+  <!-- Decoración -->
+  <div
+    class="pointer-events-none absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-vinotinto-100/70 blur-3xl"
+  ></div>
+
+  <div
+    class="pointer-events-none absolute -bottom-40 -left-40 -z-10 h-96 w-96 rounded-full bg-vinotinto-100/50 blur-3xl"
+  ></div>
+
+  <div
+    class="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16"
+  >
+    <!-- Texto -->
+    <div
+      class="order-2 space-y-7 text-center lg:order-1 lg:col-span-7 lg:text-left"
+    >
+
+      <!-- Título -->
+      <h1
+        class="font-poppins text-4xl font-semibold leading-[1.08] tracking-tight text-[#2b181d] sm:text-5xl md:text-6xl lg:text-7xl"
+      >
+        Realza tu belleza,
+        <span class="text-vinotinto-700">celebra tu esencia.</span>
+      </h1>
+
+      <!-- Descripción -->
+      <p
+        class="mx-auto max-w-2xl text-base leading-relaxed text-[#2b181d]/65 sm:text-lg lg:mx-0 lg:text-xl"
+      >
+        Soy
+        <strong class="font-semibold text-[#2b181d]">
+          Daniela Valderrama
+        </strong>,
+        maquilladora profesional y creadora de
+        <strong class="font-semibold text-vinotinto-700">
+          Daniglow
+        </strong>.
+        Creo looks personalizados que resaltan tus facciones y te hacen
+        sentir segura, auténtica y radiante en cada ocasión.
+      </p>
+
+      <!-- Botones -->
+      <div
+        class="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row lg:justify-start"
+      >
+        <button
+          type="button"
+          onclick="cargarContenido('paginas/contacto.html')"
+          class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-vinotinto-700 px-7 py-3.5 font-semibold text-white shadow-lg shadow-vinotinto-900/15 transition duration-300 hover:-translate-y-0.5 hover:bg-vinotinto-600 active:scale-95 sm:w-auto"
+        >
+          <i class="bi bi-calendar-heart" aria-hidden="true"></i>
+          Agendar mi cita
+          <i
+            class="bi bi-arrow-right transition-transform duration-300 group-hover:translate-x-1"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+        <a
+          href="https://wa.me/573134722142?text=Hola%20Daniela%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20tus%20servicios%20de%20maquillaje"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex w-full items-center justify-center gap-2 rounded-full border border-vinotinto-700/20 bg-white px-7 py-3.5 font-semibold text-vinotinto-800 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-vinotinto-700/40 hover:bg-vinotinto-100 sm:w-auto"
+        >
+          <i class="bi bi-whatsapp" aria-hidden="true"></i>
+          Escríbeme
+        </a>
+      </div>
+
+      <!-- Mini información -->
+      <div
+        class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pt-3 text-sm text-[#2b181d]/55 lg:justify-start"
+      >
+        <span class="inline-flex items-center gap-2">
+          <i class="bi bi-stars text-vinotinto-600" aria-hidden="true"></i>
+          Looks personalizados
+        </span>
+
+        <span class="hidden h-1 w-1 rounded-full bg-vinotinto-300 sm:block"></span>
+
+        <span class="inline-flex items-center gap-2">
+          <i class="bi bi-heart text-vinotinto-600" aria-hidden="true"></i>
+          Atención personalizada
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     CONTENIDO PRINCIPAL
+========================================================== -->
+<main
+  class="mx-auto max-w-7xl space-y-24 px-5 py-20 sm:px-8 sm:py-24 lg:px-8 lg:py-28"
+>
+  <!-- =======================================================
+       SERVICIOS
+  ======================================================== -->
+  <section id="servicios" aria-labelledby="servicios-title" class="w-full">
+    <div class="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
+      <span
+        class="text-xs font-semibold uppercase tracking-[0.22em] text-vinotinto-600"
+      >
+        Lo que hago
+      </span>
+
+      <h2
+        id="servicios-title"
+        class="mt-3 font-poppins text-3xl font-semibold tracking-tight text-[#2b181d] sm:text-4xl lg:text-5xl"
+      >
+        Servicios de maquillaje
+      </h2>
+
+      <p
+        class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#2b181d]/60 sm:text-lg"
+      >
+        Cada rostro es único. Por eso creo propuestas de maquillaje
+        pensadas para tu estilo, ocasión y personalidad.
+      </p>
+    </div>
+
+    <!-- Tarjetas dinámicas -->
+    <div
+      id="contenedor-servicios"
+      class="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+    >
+      <!-- Las tarjetas son inyectadas mediante JavaScript -->
+    </div>
+  </section>
+
+  <!-- =======================================================
+       SOBRE MÍ + CONTACTO
+  ======================================================== -->
+  <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-8">
+    <!-- Sobre Daniela -->
+    <section
+      id="sobre-nosotros"
+      aria-labelledby="sobre-title"
+      class="lg:col-span-5"
+    >
+      <div
+        class="relative h-full min-h-[480px] overflow-hidden rounded-[2rem] border border-white/80 bg-white/60 p-7 shadow-[0_15px_50px_rgba(54,0,13,0.08)] backdrop-blur sm:p-10"
+      >
+        <!-- Decoración -->
+        <div
+          class="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-vinotinto-100/70"
+        ></div>
+
+        <div
+          class="relative flex h-full flex-col items-center justify-center text-center"
+        >
+          <span
+            class="text-xs font-semibold uppercase tracking-[0.22em] text-vinotinto-600"
+          >
+            Conóceme
+          </span>
+
+          <h2
+            id="sobre-title"
+            class="mt-3 font-poppins text-2xl font-semibold text-[#2b181d] sm:text-3xl"
+          >
+            Hola, soy Daniela
+          </h2>
+
+          <div
+            class="my-7 flex h-32 w-32 items-center justify-center rounded-full border border-vinotinto-100 bg-[#f8f3f4] p-5 shadow-inner sm:h-40 sm:w-40"
+          >
+            <img
+              src="./img/Daniglow.png"
+              alt="Daniglow"
+              class="max-h-full max-w-full object-contain"
+              loading="lazy"
+            >
+          </div>
+
+          <p
+            class="max-w-md text-base leading-relaxed text-[#2b181d]/65 sm:text-lg"
+          >
+            Soy
+            <strong class="font-semibold text-[#2b181d]">
+              Daniela Valderrama
+            </strong>,
+            maquilladora profesional apasionada por la belleza y los
+            pequeños detalles que hacen que cada persona se sienta
+            especial.
+          </p>
+
+          <p
+            class="mt-4 max-w-md text-sm leading-relaxed text-[#2b181d]/50"
+          >
+            Mi objetivo es que tu maquillaje no transforme quién eres,
+            sino que resalte aquello que te hace única.
+          </p>
+
+          <button
+            type="button"
+            onclick="cargarContenido('paginas/sobre_nosotros.html')"
+            class="mt-7 inline-flex items-center gap-2 rounded-full border border-vinotinto-700/20 px-6 py-3 text-sm font-semibold text-vinotinto-800 transition hover:bg-vinotinto-100"
+          >
+            Conoce más sobre mí
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section
+      id="contacto"
+      aria-labelledby="contacto-title"
+      class="lg:col-span-7"
+    >
+      <div
+        class="h-full rounded-[2rem] border border-white/80 bg-white/70 p-7 shadow-[0_15px_50px_rgba(54,0,13,0.08)] backdrop-blur sm:p-10"
+      >
+        <div class="mb-8">
+          <span
+            class="text-xs font-semibold uppercase tracking-[0.22em] text-vinotinto-600"
+          >
+            Agenda tu momento
+          </span>
+
+          <h2
+            id="contacto-title"
+            class="mt-3 font-poppins text-2xl font-semibold text-[#2b181d] sm:text-3xl"
+          >
+            ¿Lista para lucir radiante?
+          </h2>
+
+          <p
+            class="mt-3 max-w-xl text-sm leading-relaxed text-[#2b181d]/60 sm:text-base"
+          >
+            Cuéntame qué tienes en mente y me pondré en contacto contigo
+            para ayudarte a encontrar el look perfecto para tu ocasión.
+          </p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <form
+          id="contact-form"
+          class="grid grid-cols-1 gap-4 sm:grid-cols-2"
+          novalidate
+        >
+          <!-- Nombre -->
+          <div>
+            <label
+              for="nombre"
+              class="mb-1.5 block text-xs font-semibold text-[#2b181d]/70"
+            >
+              Nombre
+            </label>
+
+            <div class="relative">
+              <i
+                class="fa-solid fa-user pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-xs text-vinotinto-400"
+                aria-hidden="true"
+              ></i>
+
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                placeholder="Tu nombre"
+                autocomplete="name"
+                required
+                class="h-12 w-full rounded-xl border border-vinotinto-100 bg-[#f8f3f4] pl-11 pr-4 text-sm text-[#2b181d] outline-none transition placeholder:text-[#2b181d]/35 focus:border-vinotinto-400 focus:bg-white focus:ring-4 focus:ring-vinotinto-100"
+              >
+            </div>
+          </div>
+
+          <!-- Evento -->
+          <div>
+            <label
+              for="evento"
+              class="mb-1.5 block text-xs font-semibold text-[#2b181d]/70"
+            >
+              Servicio
+            </label>
+
+            <div class="relative">
+              <i
+                class="fa-solid fa-wand-magic-sparkles pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-xs text-vinotinto-400"
+                aria-hidden="true"
+              ></i>
+
+              <input
+                id="evento"
+                name="evento"
+                type="text"
+                placeholder="Novia, social, editorial..."
+                autocomplete="off"
+                class="h-12 w-full rounded-xl border border-vinotinto-100 bg-[#f8f3f4] pl-11 pr-4 text-sm text-[#2b181d] outline-none transition placeholder:text-[#2b181d]/35 focus:border-vinotinto-400 focus:bg-white focus:ring-4 focus:ring-vinotinto-100"
+              >
+            </div>
+          </div>
+
+          <!-- Correo -->
+          <div>
+            <label
+              for="correo"
+              class="mb-1.5 block text-xs font-semibold text-[#2b181d]/70"
+            >
+              Correo electrónico
+            </label>
+
+            <div class="relative">
+              <i
+                class="fa-solid fa-envelope pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-xs text-vinotinto-400"
+                aria-hidden="true"
+              ></i>
+
+              <input
+                id="correo"
+                name="correo"
+                type="email"
+                placeholder="correo@ejemplo.com"
+                autocomplete="email"
+                required
+                class="h-12 w-full rounded-xl border border-vinotinto-100 bg-[#f8f3f4] pl-11 pr-4 text-sm text-[#2b181d] outline-none transition placeholder:text-[#2b181d]/35 focus:border-vinotinto-400 focus:bg-white focus:ring-4 focus:ring-vinotinto-100"
+              >
+            </div>
+          </div>
+
+          <!-- Teléfono -->
+          <div>
+            <label
+              for="telefono"
+              class="mb-1.5 block text-xs font-semibold text-[#2b181d]/70"
+            >
+              WhatsApp / Teléfono
+            </label>
+
+            <div class="relative">
+              <i
+                class="fa-solid fa-phone pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-xs text-vinotinto-400"
+                aria-hidden="true"
+              ></i>
+
+              <input
+                id="telefono"
+                name="telefono"
+                type="tel"
+                inputmode="numeric"
+                placeholder="Tu número"
+                autocomplete="tel"
+                required
+                pattern="[0-9]{7,15}"
+                class="h-12 w-full rounded-xl border border-vinotinto-100 bg-[#f8f3f4] pl-11 pr-4 text-sm text-[#2b181d] outline-none transition placeholder:text-[#2b181d]/35 focus:border-vinotinto-400 focus:bg-white focus:ring-4 focus:ring-vinotinto-100"
+              >
+            </div>
+          </div>
+
+          <!-- Mensaje -->
+          <div class="sm:col-span-2">
+            <label
+              for="mensaje"
+              class="mb-1.5 block text-xs font-semibold text-[#2b181d]/70"
+            >
+              Cuéntame sobre tu evento
+            </label>
+
+            <div class="relative">
+              <i
+                class="fa-solid fa-message pointer-events-none absolute left-4 top-4 z-10 text-xs text-vinotinto-400"
+                aria-hidden="true"
+              ></i>
+
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="Fecha, hora, lugar y cualquier detalle que quieras contarme..."
+                required
+                class="w-full resize-none rounded-xl border border-vinotinto-100 bg-[#f8f3f4] py-3.5 pl-11 pr-4 text-sm leading-relaxed text-[#2b181d] outline-none transition placeholder:text-[#2b181d]/35 focus:border-vinotinto-400 focus:bg-white focus:ring-4 focus:ring-vinotinto-100"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Botón -->
+          <div class="pt-2 sm:col-span-2">
+            <button
+              type="submit"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-vinotinto-700 px-7 py-3.5 font-semibold text-white shadow-lg shadow-vinotinto-900/10 transition duration-300 hover:-translate-y-0.5 hover:bg-vinotinto-600 active:scale-95 sm:w-auto"
+            >
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Enviar solicitud
+            </button>
+
+            <p class="mt-3 text-xs text-[#2b181d]/40">
+              También puedes escribirme directamente por WhatsApp.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- =========================================================
+     MODAL
+========================================================== -->
+<div
+  id="modal-msg"
+  class="fixed inset-0 z-[100] hidden items-center justify-center bg-[#220008]/60 p-4 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="modal-text"
+>
+  <div
+    class="w-full max-w-sm rounded-[2rem] border border-white/70 bg-white p-7 text-center shadow-2xl"
+  >
+    <div
+      class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-vinotinto-100 text-vinotinto-700"
+    >
+      <i class="bi bi-check-lg text-2xl" aria-hidden="true"></i>
+    </div>
+
+    <p
+      id="modal-text"
+      class="text-base font-medium leading-relaxed text-[#2b181d] sm:text-lg"
+    ></p>
+
+    <button
+      id="closeModal"
+      type="button"
+      class="mt-6 w-full rounded-full bg-vinotinto-700 px-6 py-3 font-semibold text-white transition hover:bg-vinotinto-600"
+    >
+      Cerrar
+    </button>
+  </div>
+</div>
