@@ -1,83 +1,102 @@
-<section id="servicios" class="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
+<section id="servicios" class="bg-neumo-paper shadow-neumo rounded-3xl p-8 lg:p-12 border border-white/60 mb-24">
   <div class="max-w-6xl mx-auto">
     <!-- Título y descripción -->
-    <h2 class="text-3xl font-semibold text-center mb-4">Resalta tu Belleza Única</h2>
-    <p class="text-center text-gray-600 mb-8">
+    <h2 class="text-3xl md:text-4xl font-bold font-display text-vinotinto-900 text-center mb-4">Resalta tu Belleza Única</h2>
+    <p class="text-center text-neumo-ink/80 max-w-3xl mx-auto mb-10 leading-relaxed">
       Realza tu estilo con nuestros servicios profesionales de maquillaje. Combinamos técnicas modernas, productos de alta calidad y pasión para hacerte lucir radiante en cada ocasión.
     </p>
 
     <!-- Beneficios -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-      <div class="neumorph-inset text-center p-6 bg-gray-50 rounded-lg">
-        <i class="bi bi-sparkles text-indigo-600 text-4xl mb-3"></i>
-        <h5 class="font-semibold mb-2">Productos Alta Gama</h5>
-        <p class="text-gray-600">Cosméticos duraderos, hipoalergénicos y de marcas reconocidas.</p>
+      <div class="p-6 rounded-2xl bg-neumo-paper shadow-neumo-inset text-center border border-white/40 flex flex-col items-center">
+        <div class="w-14 h-14 rounded-2xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center text-2xl mb-4">
+          <i class="bi bi-sparkles" aria-hidden="true"></i>
+        </div>
+        <h5 class="font-bold font-display text-vinotinto-900 mb-2">Productos Alta Gama</h5>
+        <p class="text-xs text-neumo-ink/75 leading-relaxed">Cosméticos duraderos, hipoalergénicos y de marcas reconocidas.</p>
       </div>
-      <div class="neumorph-inset text-center p-6 bg-gray-50 rounded-lg">
-        <i class="bi bi-person-heart text-indigo-600 text-4xl mb-3"></i>
-        <h5 class="font-semibold mb-2">Asesoría Personalizada</h5>
-        <p class="text-gray-600">Analizamos tus rasgos y tipo de piel para crear el look perfecto para ti.</p>
+
+      <div class="p-6 rounded-2xl bg-neumo-paper shadow-neumo-inset text-center border border-white/40 flex flex-col items-center">
+        <div class="w-14 h-14 rounded-2xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center text-2xl mb-4">
+          <i class="bi bi-person-heart" aria-hidden="true"></i>
+        </div>
+        <h5 class="font-bold font-display text-vinotinto-900 mb-2">Asesoría Personalizada</h5>
+        <p class="text-xs text-neumo-ink/75 leading-relaxed">Analizamos tus rasgos y tipo de piel para crear el look perfecto para ti.</p>
       </div>
-      <div class="neumorph-inset text-center p-6 bg-gray-50 rounded-lg">
-        <i class="bi bi-clock-history text-indigo-600 text-4xl mb-3"></i>
-        <h5 class="font-semibold mb-2">Puntualidad y Confort</h5>
-        <p class="text-gray-600">Atención profesional a domicilio o en estudio para tu total comodidad.</p>
+
+      <div class="p-6 rounded-2xl bg-neumo-paper shadow-neumo-inset text-center border border-white/40 flex flex-col items-center">
+        <div class="w-14 h-14 rounded-2xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center text-2xl mb-4">
+          <i class="bi bi-clock-history" aria-hidden="true"></i>
+        </div>
+        <h5 class="font-bold font-display text-vinotinto-900 mb-2">Puntualidad y Confort</h5>
+        <p class="text-xs text-neumo-ink/75 leading-relaxed">Atención profesional a domicilio o en estudio para tu total comodidad.</p>
       </div>
     </div>
 
     <!-- Tarjetas de servicios -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
       <!-- Servicio 1 -->
-      <div class="servicio-card neumorph-bg transition-transform duration-300">
-        <img src="../img/MaquillajeSocial.jpg" alt="Maquillaje Social y de Eventos" class="servicio-card-img">
-        <div class="card-body text-center">
-          <h5 class="font-semibold mb-2">Maquillaje Social</h5>
-          <p class="text-gray-600 mb-4">Ideal para fiestas, cenas y graduaciones. Un look elegante que resalta tu mejor versión.</p>
-          <a href="#contacto" class="btn-neumorph-morado inline-block py-2 px-4 rounded-full transition">
-            Agendar cita
+      <div class="group bg-neumo-paper rounded-2xl shadow-neumo overflow-hidden border border-white/60 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+        <div class="overflow-hidden h-48 bg-vinotinto-900/10">
+          <img src="../img/MaquillajeSocial.jpg" alt="Maquillaje Social y de Eventos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 text-center flex flex-col items-center flex-grow">
+          <h5 class="font-bold font-display text-vinotinto-900 text-lg mb-2">Maquillaje Social</h5>
+          <p class="text-xs text-neumo-ink/80 mb-6 leading-relaxed">Ideal para fiestas, cenas y graduaciones. Un look elegante que resalta tu mejor versión.</p>
+          <a href="#contacto" onclick="cargarContenido('paginas/contacto.html')" class="mt-auto inline-flex items-center gap-2 bg-neumo-paper shadow-neumo hover:shadow-neumo-inset text-vinotinto-800 font-bold py-2.5 px-6 rounded-full text-xs transition-all duration-300 border border-white/60">
+            Agendar cita <i class="bi bi-calendar-check text-xs" aria-hidden="true"></i>
           </a>
         </div>
       </div>
+
       <!-- Servicio 2 -->
-      <div class="servicio-card neumorph-bg transition-transform duration-300">
-        <img src="../img/MaquillajeNovias.jpg" alt="Maquillaje para Novias" class="servicio-card-img">
-        <div class="card-body text-center">
-          <h5 class="font-semibold mb-2">Especial Novias</h5>
-          <p class="text-gray-600 mb-4">Incluye prueba previa y maquillaje de larga duración con acabado perfecto para fotos.</p>
-          <a href="#contacto" class="btn-neumorph-morado inline-block py-2 px-4 rounded-full transition">
-            Agendar cita
+      <div class="group bg-neumo-paper rounded-2xl shadow-neumo overflow-hidden border border-white/60 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+        <div class="overflow-hidden h-48 bg-vinotinto-900/10">
+          <img src="../img/MaquillajeNovias.jpg" alt="Maquillaje para Novias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 text-center flex flex-col items-center flex-grow">
+          <h5 class="font-bold font-display text-vinotinto-900 text-lg mb-2">Especial Novias</h5>
+          <p class="text-xs text-neumo-ink/80 mb-6 leading-relaxed">Incluye prueba previa y maquillaje de larga duración con acabado perfecto para fotos.</p>
+          <a href="#contacto" onclick="cargarContenido('paginas/contacto.html')" class="mt-auto inline-flex items-center gap-2 bg-neumo-paper shadow-neumo hover:shadow-neumo-inset text-vinotinto-800 font-bold py-2.5 px-6 rounded-full text-xs transition-all duration-300 border border-white/60">
+            Agendar cita <i class="bi bi-calendar-check text-xs" aria-hidden="true"></i>
           </a>
         </div>
       </div>
+
       <!-- Servicio 3 -->
-      <div class="servicio-card neumorph-bg transition-transform duration-300">
-        <img src="../img/Automaquillaje.jpg" alt="Cursos de Automaquillaje" class="servicio-card-img">
-        <div class="card-body text-center">
-          <h5 class="font-semibold mb-2">Cursos de Automaquillaje</h5>
-          <p class="text-gray-600 mb-4">Aprende a maquillarte según tu rostro, técnicas paso a paso y uso de tus brochas.</p>
-          <a href="#contacto" class="btn-neumorph-morado inline-block py-2 px-4 rounded-full transition">
-            Agendar cita
+      <div class="group bg-neumo-paper rounded-2xl shadow-neumo overflow-hidden border border-white/60 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+        <div class="overflow-hidden h-48 bg-vinotinto-900/10">
+          <img src="../img/Automaquillaje.jpg" alt="Cursos de Automaquillaje" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 text-center flex flex-col items-center flex-grow">
+          <h5 class="font-bold font-display text-vinotinto-900 text-lg mb-2">Cursos de Automaquillaje</h5>
+          <p class="text-xs text-neumo-ink/80 mb-6 leading-relaxed">Aprende a maquillarte según tu rostro, técnicas paso a paso y uso de tus brochas.</p>
+          <a href="#contacto" onclick="cargarContenido('paginas/contacto.html')" class="mt-auto inline-flex items-center gap-2 bg-neumo-paper shadow-neumo hover:shadow-neumo-inset text-vinotinto-800 font-bold py-2.5 px-6 rounded-full text-xs transition-all duration-300 border border-white/60">
+            Agendar cita <i class="bi bi-calendar-check text-xs" aria-hidden="true"></i>
           </a>
         </div>
       </div>
+
       <!-- Servicio 4 -->
-      <div class="servicio-card neumorph-bg transition-transform duration-300">
-        <img src="../img/MaquillajeEditorial.jpg" alt="Maquillaje Editorial y Fotografía" class="servicio-card-img">
-        <div class="card-body text-center">
-          <h5 class="font-semibold mb-2">Editorial y Fotografía</h5>
-          <p class="text-gray-600 mb-4">Técnicas avanzadas para sesiones fotográficas, pasarelas y proyectos creativos.</p>
-          <a href="#contacto" class="btn-neumorph-morado inline-block py-2 px-4 rounded-full transition">
-            Agendar cita
+      <div class="group bg-neumo-paper rounded-2xl shadow-neumo overflow-hidden border border-white/60 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+        <div class="overflow-hidden h-48 bg-vinotinto-900/10">
+          <img src="../img/MaquillajeEditorial.jpg" alt="Maquillaje Editorial y Fotografía" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 text-center flex flex-col items-center flex-grow">
+          <h5 class="font-bold font-display text-vinotinto-900 text-lg mb-2">Editorial y Fotografía</h5>
+          <p class="text-xs text-neumo-ink/80 mb-6 leading-relaxed">Técnicas avanzadas para sesiones fotográficas, pasarelas y proyectos creativos.</p>
+          <a href="#contacto" onclick="cargarContenido('paginas/contacto.html')" class="mt-auto inline-flex items-center gap-2 bg-neumo-paper shadow-neumo hover:shadow-neumo-inset text-vinotinto-800 font-bold py-2.5 px-6 rounded-full text-xs transition-all duration-300 border border-white/60">
+            Agendar cita <i class="bi bi-calendar-check text-xs" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </div>
 
     <!-- Llamado a la acción -->
-    <div class="text-center">
-      <h4 class="text-xl font-semibold mb-4">¿Tienes un evento especial en puerta?</h4>
-      <a href="#contacto" class="inline-block bg-indigo-600 text-white py-3 px-8 rounded-full hover:bg-indigo-700 transition">
-        ¡Reserva tu Cita Ahora!
+    <div class="p-8 rounded-2xl bg-neumo-paper shadow-neumo-inset border border-white/40 text-center max-w-2xl mx-auto">
+      <h4 class="text-xl font-bold font-display text-vinotinto-900 mb-4">¿Tienes un evento especial en puerta?</h4>
+      <a href="#contacto" onclick="cargarContenido('paginas/contacto.html')" class="inline-flex items-center gap-2 bg-vinotinto-700 hover:bg-vinotinto-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 text-sm">
+        ¡Reserva tu Cita Ahora! <i class="bi bi-arrow-right-short text-lg" aria-hidden="true"></i>
       </a>
     </div>
   </div>

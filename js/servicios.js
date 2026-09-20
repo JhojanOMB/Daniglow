@@ -60,175 +60,57 @@
 
     clearChildren(container);
 
-    servicios.forEach(
-      ([titulo, icono, resumen, detalles], index) => {
+    servicios.forEach(([titulo, icono, resumen, detalles], index) => {
+      // Ícono Neumórfico
+      const iconCircle = create('div', {
+        class: 'w-14 h-14 rounded-2xl bg-neumo-paper shadow-neumo flex items-center justify-center text-2xl text-vinotinto-700 mb-4 group-hover:scale-110 transition-transform duration-300',
+        html: `<i class="bi ${icono}" aria-hidden="true"></i>`
+      });
 
-        // =====================================================
-        // TARJETA
-        // =====================================================
+      // Título
+      const tituloElemento = create('h3', {
+        class: 'text-xl font-bold font-display text-vinotinto-900 mb-2 group-hover:text-vinotinto-700 transition-colors',
+        text: titulo
+      });
 
-        const card = create('div', {
-          class: 'servicio-flip',
-          tabindex: '0',
-          role: 'button',
-          'aria-label': `${titulo}. Ver detalles`,
+      // Resumen / Bajada
+      const resumenElemento = create('p', {
+        class: 'text-sm font-semibold text-vinotinto-600 mb-3',
+        text: resumen
+      });
+
+      // Separador sutil
+      const separador = create('hr', {
+        class: 'border-vinotinto-900/10 mb-3 w-full'
+      });
+
+      // Detalles explicativos
+      const detallesElemento = create('p', {
+        class: 'text-xs text-neumo-ink/80 leading-relaxed mt-auto',
+        text: detalles
+      });
+
+      // Contenedor de la tarjeta estática
+      const card = create(
+        'div',
+        {
+          class: 'group bg-neumo-paper rounded-2xl shadow-neumo p-6 flex flex-col justify-between border border-white/60 hover:-translate-y-1 transition-all duration-300 h-full',
           'data-aos': 'fade-up',
           'data-aos-delay': `${(index + 1) * 100}`
-        });
+        },
+        [iconCircle, tituloElemento, resumenElemento, separador, detallesElemento]
+      );
 
-
-        // =====================================================
-        // CONTENEDOR 3D
-        // =====================================================
-
-        const inner = create('div', {
-          class: 'servicio-flip-inner'
-        });
-
-
-        // =====================================================
-        // CARA FRONTAL
-        // =====================================================
-
-        const front = create('div', {
-          class: 'servicio-flip-front'
-        });
-
-
-        // Icono
-
-        const iconCircle = create('div', {
-          class: 'servicio-flip-icon',
-          html: `
-            <i
-              class="bi ${icono}"
-              aria-hidden="true">
-            </i>
-          `
-        });
-
-
-        // Título
-
-        const tituloElemento = create('h3', {
-          text: titulo
-        });
-
-
-        // Resumen
-
-        const resumenElemento = create('p', {
-          text: resumen
-        });
-
-
-        front.append(
-          iconCircle,
-          tituloElemento,
-          resumenElemento
-        );
-
-
-        // =====================================================
-        // CARA TRASERA
-        // =====================================================
-
-        const back = create('div', {
-          class: 'servicio-flip-back'
-        });
-
-
-        // Título
-
-        const detallesTitulo = create('h4', {
-          text: 'Detalles'
-        });
-
-
-        // Separador
-
-        const separador = create('hr');
-
-
-        // Detalles
-
-        const detallesTexto = create('p', {
-          text: detalles
-        });
-
-
-        back.append(
-          detallesTitulo,
-          separador,
-          detallesTexto
-        );
-
-
-        // =====================================================
-        // ENSAMBLAR
-        // =====================================================
-
-        inner.append(
-          front,
-          back
-        );
-
-        card.appendChild(inner);
-
-
-        // =====================================================
-        // CLICK
-        // =====================================================
-
-        card.addEventListener('click', () => {
-          card.classList.toggle('is-flipped');
-
-          const volteada = card.classList.contains('is-flipped');
-
-          card.setAttribute(
-            'aria-label',
-            volteada
-              ? `${titulo}. Ocultar detalles`
-              : `${titulo}. Ver detalles`
-          );
-        });
-
-
-        // =====================================================
-        // TECLADO
-        // =====================================================
-
-        card.addEventListener('keydown', (event) => {
-
-          if (
-            event.key === 'Enter' ||
-            event.key === ' '
-          ) {
-
-            event.preventDefault();
-
-            card.classList.toggle('is-flipped');
-
-            const volteada =
-              card.classList.contains('is-flipped');
-
-            card.setAttribute(
-              'aria-label',
-              volteada
-                ? `${titulo}. Ocultar detalles`
-                : `${titulo}. Ver detalles`
-            );
-          }
-        });
-
-
-        container.appendChild(card);
-      }
-    );
+      container.appendChild(card);
+    });
   }
 
+  // Auto-ejecución al cargar la vista
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderServicios);
+  } else {
+    renderServicios();
+  }
 
-  window.appServicios = {
-    renderServicios
-  };
+  window.appServicios = { renderServicios };
 })();

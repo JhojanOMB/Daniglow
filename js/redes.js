@@ -1,18 +1,20 @@
 // Define los enlaces a las redes sociales
 const socialLinks = {
-  whatsapp: "https://wa.me/3025934518",
-  instagram: "https://www.instagram.com/jomb_tecnologias/",
-  github: "https://github.com/JhojanOMB"
+  whatsapp: "https://wa.me/573134722142",
+  instagram: "https://www.instagram.com/daniglow_beauty/"
 };
 
-document.getElementById("whatsapp").addEventListener("click", function() {
-  window.open(socialLinks.whatsapp, "_blank");
-});
+// Event Listeners con verificación preventiva
+const btnWhatsapp = document.getElementById("whatsapp");
+if (btnWhatsapp) {
+  btnWhatsapp.addEventListener("click", function() {
+    window.open(socialLinks.whatsapp, "_blank");
+  });
+}
 
-document.getElementById("github").addEventListener("click", function() {
-  window.open(socialLinks.github, "_blank");
-});
-
-document.getElementById("instagram").addEventListener("click", function() {
-  window.open(socialLinks.instagram, "_blank");
-});
+const btnInstagram = document.getElementById("instagram");
+if (btnInstagram) {
+  btnInstagram.addEventListener("click", function() {
+    window.open(socialLinks.instagram, "_blank");
+  });
+}

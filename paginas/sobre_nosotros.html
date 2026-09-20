@@ -1,126 +1,161 @@
-<body class="bg-gray-100 text-gray-800 px-6 py-10 lg:px-24">
+<body class="bg-neumo-bg text-neumo-ink px-6 py-10 lg:px-24 font-sans">
 
   <!-- SOBRE NOSOTROS -->
-  <section id="sobre-nosotros-body" class="neumorph mb-24 py-16 px-6 lg:px-12">
-    <div class="max-w-4xl mx-auto space-y-6">
-      <h1 class="text-3xl md:text-4xl font-bold text-center">¿Quiénes somos?</h1>
+  <section id="sobre-nosotros-body" class="bg-neumo-paper shadow-neumo rounded-3xl mb-24 py-16 px-6 lg:px-12 border border-white/60">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <h1 class="text-3xl md:text-4xl font-bold font-display text-vinotinto-900 text-center">¿Quiénes somos?</h1>
 
-      <p class="text-center text-gray-600 leading-relaxed">
-        En <strong>JOMB</strong> somos una empresa colombiana especializada en el desarrollo de aplicaciones web modernas y funcionales. Combinamos diseño, tecnología y estrategia para crear experiencias digitales que conectan y generan valor.
+      <p class="text-center text-neumo-ink/80 leading-relaxed text-base md:text-lg">
+        En <strong class="text-vinotinto-800 font-display">Dani Glow</strong> somos un estudio de belleza y estética integral dedicado a resaltar tu estilo único. Combinamos técnicas profesionales, productos de alta gama y atención personalizada para brindarte una experiencia que potencia tu seguridad y confianza.
       </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="flex items-start gap-4">
-          <div class="p-4 neumorph-inset">
-            <i class="fas fa-bolt text-indigo-600 text-2xl"></i>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-neumo-paper shadow-neumo-inset">
+          <div class="p-3 rounded-xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center shrink-0">
+            <i class="bi bi-brush text-2xl" aria-hidden="true"></i>
           </div>
           <div>
-            <h6 class="font-semibold">Desarrollo Ágil</h6>
-            <p class="text-sm text-gray-600">Entrega rápida y de calidad con Django y Bootstrap.</p>
+            <h6 class="font-bold font-display text-vinotinto-900">Técnicas Avanzadas</h6>
+            <p class="text-xs text-neumo-ink/75 mt-1">Maquillaje de alta duración, visajismo y acabado HD.</p>
           </div>
         </div>
-        <div class="flex items-start gap-4">
-          <div class="p-4 neumorph-inset">
-            <i class="fas fa-palette text-indigo-600 text-2xl"></i>
+
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-neumo-paper shadow-neumo-inset">
+          <div class="p-3 rounded-xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center shrink-0">
+            <i class="bi bi-heart text-2xl" aria-hidden="true"></i>
           </div>
           <div>
-            <h6 class="font-semibold">Diseño Moderno</h6>
-            <p class="text-sm text-gray-600">Interfaces intuitivas y adaptativas.</p>
+            <h6 class="font-bold font-display text-vinotinto-900">Atención Exclusiva</h6>
+            <p class="text-xs text-neumo-ink/75 mt-1">Asesoría personalizada adaptada a tu tipo de rostro y evento.</p>
           </div>
         </div>
-        <div class="flex items-start gap-4">
-          <div class="p-4 neumorph-inset">
-            <i class="fas fa-rocket text-indigo-600 text-2xl"></i>
+
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-neumo-paper shadow-neumo-inset">
+          <div class="p-3 rounded-xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center shrink-0">
+            <i class="bi bi-stars text-2xl" aria-hidden="true"></i>
           </div>
           <div>
-            <h6 class="font-semibold">Creatividad</h6>
-            <p class="text-sm text-gray-600">Soluciones únicas a la medida de tu marca.</p>
+            <h6 class="font-bold font-display text-vinotinto-900">Productos Premium</h6>
+            <p class="text-xs text-neumo-ink/75 mt-1">Cosmética de alta calidad, a prueba de agua y respetuosa con la piel.</p>
           </div>
         </div>
-        <div class="flex items-start gap-4">
-          <div class="p-4 neumorph-inset">
-            <i class="fas fa-handshake text-indigo-600 text-2xl"></i>
+
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-neumo-paper shadow-neumo-inset">
+          <div class="p-3 rounded-xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center shrink-0">
+            <i class="bi bi-shield-check text-2xl" aria-hidden="true"></i>
           </div>
           <div>
-            <h6 class="font-semibold">Compromiso</h6>
-            <p class="text-sm text-gray-600">Soporte continuo y atención personalizada.</p>
+            <h6 class="font-bold font-display text-vinotinto-900">Higiene y Cuidado</h6>
+            <p class="text-xs text-neumo-ink/75 mt-1">Protocolos rigurosos de esterilización y cuidado cutáneo.</p>
           </div>
         </div>
       </div>
-      <div class="text-center">
-        <a href="#contacto" onclick="cargarContenido('paginas/contacto.html')" class="mt-6 inline-block neumorph py-2 px-6 rounded-full hover:shadow-lg transition">
-          Conversemos
+
+      <div class="text-center pt-4">
+        <a href="#contacto" onclick="cargarContenido('paginas/contacto.html')" class="inline-flex items-center gap-2 bg-neumo-paper shadow-neumo hover:shadow-neumo-inset text-vinotinto-800 font-bold py-3 px-8 rounded-full transition-all duration-300 border border-white/60">
+          Agendar Cita <i class="bi bi-calendar-event text-sm" aria-hidden="true"></i>
         </a>
       </div>
     </div>
   </section>
 
   <!-- MISIÓN Y VISIÓN -->
-  <section id="mision-vision-body" class="neumorph mb-24 py-16 px-6 lg:px-12">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-      <div class="tarjeta-semiredonda">
-        <h3 class="text-2xl font-semibold">Nuestra Misión</h3>
-        <p class="text-gray-600 leading-relaxed">Brindar soluciones tecnológicas integrales que impulsen el crecimiento de nuestros clientes mediante herramientas personalizadas y soporte continuo.</p>
+  <section id="mision-vision-body" class="bg-neumo-paper shadow-neumo rounded-3xl mb-24 py-16 px-6 lg:px-12 border border-white/60">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="p-8 rounded-2xl bg-neumo-paper shadow-neumo-inset border border-white/40">
+        <div class="w-12 h-12 rounded-xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center text-xl mb-4">
+          <i class="bi bi-compass" aria-hidden="true"></i>
+        </div>
+        <h3 class="text-2xl font-bold font-display text-vinotinto-900 mb-3">Nuestra Misión</h3>
+        <p class="text-sm text-neumo-ink/80 leading-relaxed">
+          Realzar la belleza natural de cada cliente a través de servicios de maquillaje, diseño de mirada y preparación facial de alta calidad, garantizando resultados duraderos y adaptados a su personalidad.
+        </p>
       </div>
-      <div class="tarjeta-semiredonda">
-        <h3 class="text-2xl font-semibold">Nuestra Visión</h3>
-        <p class="text-gray-600 leading-relaxed">Ser referentes tecnológicos en Colombia, destacados por nuestra innovación, calidad y cercanía.</p>
+
+      <div class="p-8 rounded-2xl bg-neumo-paper shadow-neumo-inset border border-white/40">
+        <div class="w-12 h-12 rounded-xl bg-neumo-paper shadow-neumo text-vinotinto-700 flex items-center justify-center text-xl mb-4">
+          <i class="bi bi-eye" aria-hidden="true"></i>
+        </div>
+        <h3 class="text-2xl font-bold font-display text-vinotinto-900 mb-3">Nuestra Visión</h3>
+        <p class="text-sm text-neumo-ink/80 leading-relaxed">
+          Posicionarnos como un estudio de belleza referente por su excelencia técnica, innovación en tendencias cosméticas y espacios de capacitación profesional que empoderen a más personas a dominar el arte del automaquillaje.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- METAS -->
-  <section id="metas" class="neumorph mb-24 py-16 px-6 lg:px-12">
-    <div class="max-w-5xl mx-auto space-y-6">
-      <h3 class="text-2xl font-semibold text-center">Nuestras Metas</h3>
-      <ul class="space-y-4 text-gray-600 list-disc list-inside">
-        <li><strong>Expandirnos a nivel nacional</strong> en los próximos 2 años, brindando soluciones tecnológicas a empresas de todos los sectores.</li>
-        <li><strong>Implementar inteligencia artificial</strong> en nuestros productos para mejorar la toma de decisiones y automatización de procesos.</li>
-        <li><strong>Formar un equipo sólido</strong> de desarrolladores, diseñadores y expertos en UX comprometidos con la calidad y la innovación.</li>
-        <li><strong>Obtener certificaciones internacionales</strong> en desarrollo ágil y seguridad web que respalden nuestro compromiso con la excelencia.</li>
-        <li><strong>Crear productos propios</strong> que aporten valor al mercado tecnológico colombiano.</li>
-      </ul>
+  <section id="metas" class="bg-neumo-paper shadow-neumo rounded-3xl mb-24 py-16 px-6 lg:px-12 border border-white/60">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <h3 class="text-2xl md:text-3xl font-bold font-display text-vinotinto-900 text-center">Nuestros Compromisos</h3>
+      
+      <div class="space-y-4">
+        <div class="p-4 rounded-2xl bg-neumo-paper shadow-neumo flex items-center gap-4">
+          <span class="w-8 h-8 rounded-full bg-vinotinto-700 text-white font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">1</span>
+          <p class="text-sm text-neumo-ink/85"><strong class="text-vinotinto-900 font-bold">Insumos de primera línea:</strong> Utilizar exclusivamente cosméticos hipoalergénicos y reconocidos internacionalmente para proteger la salud de tu piel.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-neumo-paper shadow-neumo flex items-center gap-4">
+          <span class="w-8 h-8 rounded-full bg-vinotinto-700 text-white font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">2</span>
+          <p class="text-sm text-neumo-ink/85"><strong class="text-vinotinto-900 font-bold">Actualización constante:</strong> Capacitarnos continuamente en tendencias globales de editorial, novias y técnicas de visajismo.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-neumo-paper shadow-neumo flex items-center gap-4">
+          <span class="w-8 h-8 rounded-full bg-vinotinto-700 text-white font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">3</span>
+          <p class="text-sm text-neumo-ink/85"><strong class="text-vinotinto-900 font-bold">Puntualidad y confort:</strong> Garantizar sesiones organizadas con tiempos definidos para que disfrutes sin prisas antes de tus eventos especiales.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-neumo-paper shadow-neumo flex items-center gap-4">
+          <span class="w-8 h-8 rounded-full bg-vinotinto-700 text-white font-bold flex items-center justify-center text-xs shrink-0 shadow-sm">4</span>
+          <p class="text-sm text-neumo-ink/85"><strong class="text-vinotinto-900 font-bold">Formatos educativos:</strong> Ofrecer talleres grupales e individuales de automaquillaje accesibles y prácticos para todos los niveles.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- VALORES -->
-  <section id="valores" class="neumorph mb-24 py-16 px-6 lg:px-12">
+  <section id="valores" class="bg-neumo-paper shadow-neumo rounded-3xl mb-24 py-16 px-6 lg:px-12 border border-white/60">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-2xl font-semibold text-center mb-6">Nuestros Valores</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="neumorph-inset p-6 text-center">
-          <i class="fas fa-lightbulb text-indigo-600 text-3xl"></i>
-          <h5 class="mt-2 font-semibold">Innovación</himpse>
-          <p class="text-sm text-gray-600">Soluciones modernas que marcan la diferencia.</p>
+      <h3 class="text-2xl md:text-3xl font-bold font-display text-vinotinto-900 text-center mb-10">Nuestros Valores</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-neumo-paper shadow-neumo-inset text-center flex flex-col items-center">
+          <i class="bi bi-brightness-high text-vinotinto-700 text-3xl mb-2" aria-hidden="true"></i>
+          <h5 class="font-bold font-display text-vinotinto-900">Autenticidad</h5>
+          <p class="text-xs text-neumo-ink/75 mt-2">Resaltamos lo único en ti sin enmascarar tu esencia.</p>
         </div>
-        <div class="neumorph-inset p-6 text-center">
-          <i class="fas fa-users text-indigo-600 text-3xl"></i>
-          <h5 class="mt-2 font-semibold">Colaboración</h5>
-          <p class="text-sm text-gray-600">Trabajo en equipo para alcanzar grandes metas.</p>
+
+        <div class="p-6 rounded-2xl bg-neumo-paper shadow-neumo-inset text-center flex flex-col items-center">
+          <i class="bi bi-gem text-vinotinto-700 text-3xl mb-2" aria-hidden="true"></i>
+          <h5 class="font-bold font-display text-vinotinto-900">Calidad</h5>
+          <p class="text-xs text-neumo-ink/75 mt-2">Atención al detalle en cada trazo, tono y acabado.</p>
         </div>
-        <div class="neumorph-inset p-6 text-center">
-          <i class="fas fa-shield-alt text-indigo-600 text-3xl"></i>
-          <h5 class="mt-2 font-semibold">Confianza</h5>
-          <p class="text-sm text-gray-600">Transparencia y seguridad en nuestros procesos.</p>
+
+        <div class="p-6 rounded-2xl bg-neumo-paper shadow-neumo-inset text-center flex flex-col items-center">
+          <i class="bi bi-heart-pulse text-vinotinto-700 text-3xl mb-2" aria-hidden="true"></i>
+          <h5 class="font-bold font-display text-vinotinto-900">Empatía</h5>
+          <p class="text-xs text-neumo-ink/75 mt-2">Escuchamos tus preferencias para lograr exactamente lo que buscas.</p>
         </div>
-        <div class="neumorph-inset p-6 text-center">
-          <i class="fas fa-award text-indigo-600 text-3xl"></i>
-          <h5 class="mt-2 font-semibold">Excelencia</h5>
-          <p class="text-sm text-gray-600">Nos esforzamos por superar expectativas.</p>
+
+        <div class="p-6 rounded-2xl bg-neumo-paper shadow-neumo-inset text-center flex flex-col items-center">
+          <i class="bi bi-award text-vinotinto-700 text-3xl mb-2" aria-hidden="true"></i>
+          <h5 class="font-bold font-display text-vinotinto-900">Profesionalismo</h5>
+          <p class="text-xs text-neumo-ink/75 mt-2">Higiene rigurosa y puntualidad en cada cita contratada.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROYECTOS DESTACADOS -->
-  <section id="proyectos" class="neumorph mb-24 py-16 px-6 lg:px-12">
+  <!-- SERVICIOS / TRABAJOS DESTACADOS -->
+  <section id="proyectos" class="bg-neumo-paper shadow-neumo rounded-3xl mb-24 py-16 px-6 lg:px-12 border border-white/60">
     <div class="max-w-6xl mx-auto">
-      <h3 class="text-2xl font-semibold text-center mb-10">Proyectos Destacados</h3>
-      <div id="proyectos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+      <h3 class="text-2xl md:text-3xl font-bold font-display text-vinotinto-900 text-center mb-10">Servicios Destacados</h3>
+      <div id="contenedor-servicios" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
       <div class="text-center mt-10">
-        <a href="#portafolio" onclick="cargarContenido('paginas/portafolio.html'); toggleDrawer()" class="inline-block neumorph py-3 px-8 rounded-full hover:shadow-lg transition">
-          Ver todos los proyectos
+        <a href="#servicios" onclick="cargarContenido('paginas/servicios.html')" class="inline-flex items-center gap-2 bg-neumo-paper shadow-neumo hover:shadow-neumo-inset text-vinotinto-800 font-bold py-3 px-8 rounded-full transition-all duration-300 border border-white/60">
+          Ver todos los servicios <i class="bi bi-arrow-right text-sm" aria-hidden="true"></i>
         </a>
       </div>
     </div>
   </section>
+
 </body>

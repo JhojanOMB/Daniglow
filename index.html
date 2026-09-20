@@ -68,10 +68,6 @@
   <!-- Model Viewer 3D -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-  <!-- Scripts locales defer -->
-  <script src="./js/dom.js" defer></script>
-  <script src="./js/carga.js" defer></script>
-
   <!-- JSON-LD Datos Estructurados -->
   <script type="application/ld+json">
   {
@@ -89,14 +85,14 @@
 
 <body class="bg-neumo-light text-neumo-ink font-sans antialiased selection:bg-vinotinto-700 selection:text-white flex flex-col min-h-screen">
 
-  <!-- Header / Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 text-white transition-all duration-300">
+  <!-- Header / Navigation Bar con Fondo Degradado -->
+  <header class="sticky top-0 z-50 bg-gradient-to-r from-vinotinto-900 via-vinotinto-800 to-black/95 backdrop-blur-md border-b border-white/10 text-white shadow-lg transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
       
-      <!-- Brand Logo -->
+      <!-- Brand Logo con Texto Blanco Sólido -->
       <a href="#" onclick="cargarContenido('paginas/inicio.html')" class="flex items-center space-x-3 group focus:outline-none">
         <img src="./img/Isologo.ico" alt="Daniglow Logo" class="w-9 h-9 transition-transform duration-300 group-hover:scale-110" />
-        <span class="text-2xl font-bold tracking-wider font-display bg-gradient-to-r from-white via-vinotinto-100 to-vinotinto-300 bg-clip-text text-transparent">
+        <span class="text-2xl font-bold tracking-wider font-display text-white">
           Daniglow
         </span>
       </a>
@@ -244,6 +240,18 @@
       lenis.scrollTo(0);
     });
   </script>
+
+  <!-- MÓDULOS DE LA APLICACIÓN -->
+  <script src="./js/dom.js"></script>
+  <script src="./js/servicios.js"></script>
+  <script src="./js/inicio.js"></script>
+  <script src="./js/contacto.js"></script>
+  <script src="./js/portafolio.js"></script>
+  <script src="./js/nosotros.js"></script>
+  <script src="./js/faq.js"></script>
+
+  <!-- SCRIPT PRINCIPAL DE NAVEGACIÓN Y CARGA -->
+  <script src="./js/carga.js"></script>
 </body>
 
 </html>
