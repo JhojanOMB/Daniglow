@@ -25,10 +25,10 @@
       'Diseño personalizado según la forma de tu rostro, depilación precisa y laminado o nutrición.'
     ],
     [
-      'Lifting de Pestañas',
+      'Maquillaje Artistico',
       'ico/pestana.gif',
-      'Curvatura natural y volumen impactante.',
-      'Elevación desde la raíz, tinte opcional y tratamiento hidratante con queratina para cuidar tus pestañas.'
+      'Expresión y creatividad sin límites.',
+      'Técnicas de body painting, caracterización, efectos especiales y maquillaje para cine o teatro.'
     ],
     [
       'Asesoría de Imagen',
