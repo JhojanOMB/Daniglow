@@ -31,7 +31,14 @@
     try {
       main.innerHTML = await cargarVista(destino);
       localStorage.setItem(PAGE_KEY, destino);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      // Control de scroll suave con Lenis si existe
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: true });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
       inicializarModulos();
     } catch (error) {
       console.error('No se pudo cargar la vista:', error);
@@ -49,22 +56,31 @@
     }
   }
 
+  // Delegación de eventos de navegación
   function configurarNavegacion() {
     document.addEventListener('click', (event) => {
-      const link = event.target.closest?.('a');
+      const link = event.target.closest('a');
       if (!link) return;
+
       const href = link.getAttribute('href');
-      const requestedPage = link.dataset.load || link.dataset.cargar;
-      const localPage = href && href.includes('paginas/') && !href.startsWith('http') && !href.startsWith('//');
-      if (requestedPage || localPage) {
+      const requestedPage = link.dataset.load || link.dataset.cargar || (href && href.includes('paginas/') ? href : null);
+
+      if (requestedPage) {
         event.preventDefault();
-        cargarContenido(requestedPage || href);
+        
+        // Si el menú móvil está abierto, cerrarlo automáticamente al hacer clic en un enlace
+        if (typeof window.cerrarMenuMovil === 'function') {
+          window.cerrarMenuMovil();
+        }
+
+        cargarContenido(requestedPage);
       } else if (href === '' || href === '#') {
         event.preventDefault();
       }
     }, true);
   }
 
+  // Exponer globalmente ANTES del DOMContentLoaded
   window.cargarContenido = cargarContenido;
   window.appCarga = { cargarContenido };
 
