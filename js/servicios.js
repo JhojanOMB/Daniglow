@@ -55,30 +55,39 @@
     clearChildren(container);
 
     servicios.forEach(([titulo, icono, resumen, detalles], index) => {
-      // Imagen GIF dentro del contenedor
+      // Imagen GIF más grande (w-10 h-10)
       const imgGif = create('img', {
         src: icono,
         alt: titulo,
-        class: 'w-8 h-8 object-contain',
+        class: 'w-10 h-10 object-contain',
         onerror: "this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3163/3163158.png';"
       });
 
-      // Contenedor Neumórfico para el GIF
+      // Contenedor Neumórfico del GIF más grande (w-16 h-16)
       const iconCircle = create(
         'div',
         {
-          class: 'w-14 h-14 rounded-2xl bg-neumo-paper shadow-neumo flex items-center justify-center p-2.5 mb-4 group-hover:scale-110 transition-transform duration-300'
+          class: 'w-16 h-16 shrink-0 rounded-2xl bg-neumo-paper shadow-neumo flex items-center justify-center p-3 group-hover:scale-105 transition-transform duration-300'
         },
         [imgGif]
       );
 
-      // Título
+      // Título al lado derecho del ícono
       const tituloElemento = create('h3', {
-        class: 'text-xl font-bold font-display text-vinotinto-900 mb-2 group-hover:text-vinotinto-700 transition-colors',
+        class: 'text-lg font-bold font-display text-vinotinto-900 group-hover:text-vinotinto-700 transition-colors leading-snug',
         text: titulo
       });
 
-      // Resumen / Bajada
+      // Encabezado horizontal: Icono a la izquierda, Título a la derecha
+      const headerCard = create(
+        'div',
+        {
+          class: 'flex items-center gap-4 mb-4'
+        },
+        [iconCircle, tituloElemento]
+      );
+
+      // Resumen / Bajada (debajo del encabezado)
       const resumenElemento = create('p', {
         class: 'text-sm font-semibold text-vinotinto-600 mb-3',
         text: resumen
@@ -95,7 +104,7 @@
         text: detalles
       });
 
-      // Contenedor de la tarjeta estática
+      // Contenedor principal de la tarjeta
       const card = create(
         'div',
         {
@@ -103,7 +112,7 @@
           'data-aos': 'fade-up',
           'data-aos-delay': `${(index + 1) * 100}`
         },
-        [iconCircle, tituloElemento, resumenElemento, separador, detallesElemento]
+        [headerCard, resumenElemento, separador, detallesElemento]
       );
 
       container.appendChild(card);
