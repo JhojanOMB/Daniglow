@@ -19,10 +19,10 @@
       'Maquillaje de alta definición (HD), efectos creativos, fotografía y desfiles de moda.'
     ],
     [
-      'Diseño y Planchado de Cejas',
+      'Diseño de Cejas',
       'ico/pinzas.gif',
       'Enmarca tu rostro con simetría.',
-      'Diseño personalizado según la forma de tu rostro, depilación precisa y laminado o nutrición.'
+      'Diseño personalizado según la forma de tu rostro, depilación precisa.'
     ],
     [
       'Maquillaje Artistico',
