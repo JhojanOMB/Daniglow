@@ -2,49 +2,43 @@
   const servicios = [
     [
       'Maquillaje Social y de Gala',
-      'bi-brush',
+      'ico/cepillar.gif',
       'Elegancia y perfección para tus eventos.',
       'Técnicas de alta duración, contorno avanzado, iluminación y diseño de mirada adaptado a tu estilo.'
     ],
     [
       'Maquillaje de Novias',
-      'bi-heart',
+      'ico/lapiz-labial.gif',
       'Tu look ideal para el día más especial.',
       'Incluye prueba previa, diseño personalizado, alta resistencia al agua y cobertura de larga duración.'
     ],
     [
-      'Clases de Automaquillaje',
-      'bi-mortarboard',
-      'Aprende a realzar tu belleza natural.',
-      'Técnicas de skincare previo, uso correcto de brochas, corrector, base y transformación de día a noche.'
-    ],
-    [
       'Maquillaje Editorial y Pasarela',
-      'bi-camera',
+      'ico/brillo-de-labios.gif',
       'Arte y tendencia para producciones.',
       'Maquillaje de alta definición (HD), efectos creativos, fotografía y desfiles de moda.'
     ],
     [
       'Diseño y Planchado de Cejas',
-      'bi-eye',
+      'ico/pinzas.gif',
       'Enmarca tu rostro con simetría.',
       'Diseño personalizado según la forma de tu rostro, depilación precisa y laminado o nutrición.'
     ],
     [
       'Lifting de Pestañas',
-      'bi-stars',
+      'ico/pestana.gif',
       'Curvatura natural y volumen impactante.',
       'Elevación desde la raíz, tinte opcional y tratamiento hidratante con queratina para cuidar tus pestañas.'
     ],
     [
       'Asesoría de Imagen',
-      'bi-palette',
+      'ico/espejo.gif',
       'Descubre los tonos que te favorecen.',
       'Estudio de colorimetría personal, tipología de rostro y recomendación de paletas de maquillaje ideales.'
     ],
     [
       'Skincare y Preparación de Piel',
-      'bi-droplet',
+      'ico/crema.gif',
       'El lienzo perfecto antes del color.',
       'Limpieza profunda, hidratación express, diagnóstico de tipo de piel y aplicación de primers específicos.'
     ]
@@ -61,11 +55,22 @@
     clearChildren(container);
 
     servicios.forEach(([titulo, icono, resumen, detalles], index) => {
-      // Ícono Neumórfico
-      const iconCircle = create('div', {
-        class: 'w-14 h-14 rounded-2xl bg-neumo-paper shadow-neumo flex items-center justify-center text-2xl text-vinotinto-700 mb-4 group-hover:scale-110 transition-transform duration-300',
-        html: `<i class="bi ${icono}" aria-hidden="true"></i>`
+      // Imagen GIF dentro del contenedor
+      const imgGif = create('img', {
+        src: icono,
+        alt: titulo,
+        class: 'w-8 h-8 object-contain',
+        onerror: "this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/3163/3163158.png';"
       });
+
+      // Contenedor Neumórfico para el GIF
+      const iconCircle = create(
+        'div',
+        {
+          class: 'w-14 h-14 rounded-2xl bg-neumo-paper shadow-neumo flex items-center justify-center p-2.5 mb-4 group-hover:scale-110 transition-transform duration-300'
+        },
+        [imgGif]
+      );
 
       // Título
       const tituloElemento = create('h3', {
